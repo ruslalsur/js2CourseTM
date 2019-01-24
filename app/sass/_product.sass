@@ -1,0 +1,216 @@
+@import "_variables"
+@import "_range"
+
+.flex-col
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  flex-basis: 0
+
+.catalog
+  display: flex
+  margin-bottom: 40px
+
+.catalog-nav
+  min-width: 243px
+  margin-right: 49px
+
+.category-block
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 37px
+  border-bottom: 1px solid #ebebeb
+  border-left: 5px solid $accent-color
+  padding-left: 16px
+  padding-right: 5px
+  color: #ef5b70
+  font-size: 14px
+  font-weight: 700
+  line-height: 20px
+  text-transform: uppercase
+  margin-bottom: 18px
+
+.menu-item:hover .category-list
+    display: block
+
+.category-list
+  display: none
+  padding-left: 12px
+  padding-top: 22px
+  padding-bottom: 35px
+
+.catalog-form
+  padding-bottom: 38px
+
+.filters
+  display: flex
+  justify-content: space-between
+  margin-bottom: 40px
+  & h3
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+    margin-top: 0
+
+.now-filter
+  & p
+    margin: 0
+    & a
+      color: #6f6e6e
+      font-size: 14px
+      font-weight: 400
+      line-height: 26px
+      text-decoration: none
+      border-right: 1px solid #dfdfdf
+      padding: 0 10px
+      &:last-child
+       border: none
+      &:first-child
+        padding-left: 0
+      &:hover
+        color: $accent-color
+
+.size-filter-block
+  margin: 0 50px
+  & td
+    width: 75px
+
+.check-label
+  color: #6f6e6e
+  font-size: 14px
+  font-weight: 400
+  line-height: 22px
+  text-transform: uppercase
+  position: relative
+  padding-left: 25px
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  & .check-mark:after
+    left: 3px
+    top: -2px
+    width: 5px
+    height: 10px
+    border: solid $accent-color
+    border-width: 0 2px 2px 0
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    transform: rotate(45deg)
+  & input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+  & input:checked ~ .check-mark:after
+    display: block
+
+.check-mark
+  position: absolute
+  top: 0
+  left: 0
+  width: 13px
+  height: 13px
+  background-color: #ffffff
+  border: 1.0px solid #ebebeb
+  &:after
+    content: ""
+    position: absolute
+    display: none
+
+.price-filter
+  display: flex
+  justify-content: space-between
+  & p
+    font-size: 14px
+    line-height: 26px
+    font-weight: 400
+    color: #6f6e6e
+
+.sorting
+  height: 50px
+  background-color: #f3f3f3
+  display: flex
+  align-items: center
+
+.sort-by-label
+  border: 1px solid #ebebeb
+  margin-left: 10px
+  padding-left: 10px
+  height: 30px
+  background-color: #ffffff
+  color: #6f6e6e
+  font-size: 14px
+  font-weight: 400
+  line-height: 26px
+
+.sort-by
+  margin-left: 10px
+  padding-left: 10px
+  height: 30px
+  border: none
+  border-left: 1px solid #ebebeb
+  background-color: #ffffff
+  color: #6f6e6e
+  font-size: 14px
+  font-weight: 400
+  line-height: 26px
+
+.viewall-block
+  display: flex
+  justify-content: flex-end
+  padding-bottom: 45px
+
+.view-all
+  width: fit-content
+  height: 44px
+  border-radius: 3px
+  border: 1px solid #ef5b70
+  background-color: #ffffff
+  color: #ef5b70
+  font-size: 16px
+  font-weight: bold
+  line-height: 44px
+  text-align: center
+  display: block
+  text-decoration: none
+  padding: 0 45px
+  transition: transform 200ms
+  &:active
+    transform: scale(0.90)
+  &:hover
+    box-shadow: 0 0 2px $accent-color
+
+.footer-bonuses
+  display: flex
+  justify-content: space-around
+  align-items: center
+  height: 341px
+  background-color: #222224
+  padding: 0 85px
+
+.footer-bonus
+  width: 325px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.footer-bonus h3
+  color: #fbfbfb
+  font-size: 20px
+  font-weight: 700
+  letter-spacing: 0.5px
+
+.footer-bonus p
+  text-align: center
+  margin: 0
+  color: #fbfbfb
+  font-size: 14px
+  font-weight: 300
+  line-height: 23.95px
+  letter-spacing: 0.35px

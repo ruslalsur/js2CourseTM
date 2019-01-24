@@ -1,0 +1,280 @@
+@import "_variables"
+
+.banner
+  height: 614px
+  background-color: #e8e8e8
+
+.banner-back
+  height: 100%
+  background: url(../img/banner-man.jpg) 0 -51px
+  display: flex
+  align-items: center
+
+.brand
+  color: #222222
+  font-size: 59.95px
+  font-weight: 900
+  margin-top: 0
+  margin-bottom: 20px
+  line-height: 45px
+
+.fashion
+  color: #222222
+  font-size: 39.96px
+  font-weight: 900
+  margin: 0
+  line-height: 32px
+
+.fashion-span
+  color: $accent-color
+  transform: scaleY(1.0009)
+
+.banner-text
+  border-left: 12px solid $accent-color
+  padding-left: 12px
+
+.mozaic-block1
+  width: 560px
+  height: 542px
+  background-image: url(../img/mb-image1.jpg)
+  display: flex
+  margin-bottom: 20px
+  text-decoration: none
+  transition: transform 100ms
+
+.mozaic-block1:hover
+  transform: scale(0.990)
+
+.mozaic-block2:hover
+  transform: scale(0.990)
+.mozaic-block1u:hover
+  transform: scale(0.990)
+.mozaic-block2u:hover
+  transform: scale(0.990)
+.main
+  height: auto
+
+.mozaic-blocks
+  display: flex
+  margin-top: 98px
+
+.mozaic-block2u
+  width: 560px
+  height: 542px
+  background-image: url(../img/mb-image2u.jpg)
+  display: flex
+  text-decoration: none
+  transition: transform 100ms
+
+.mozaic-block1u
+  width: 560px
+  height: 261px
+  background-image: url(../img/mb-image1u.jpg)
+  display: flex
+  text-decoration: none
+  transition: transform 100ms
+
+.mozaic-block2
+  width: 560px
+  height: 261px
+  background-image: url(../img/mb-image2.jpg)
+  display: flex
+  margin-bottom: 20px
+  text-decoration: none
+  transition: transform 100ms
+
+.mozaic-left
+  margin-right: 20px
+
+.text-tag
+  background-color: #ffffff
+  height: 82px
+  display: flex
+  flex-direction: column
+  margin-top: 26px
+  justify-content: center
+  padding-right: 16px
+  padding-left: 16px
+
+.text-tag1
+  color: #222222
+  font-size: 18px
+  font-weight: 900
+  text-align: left
+  margin: 0
+  padding: 0
+
+.text-tag2
+  color: $accent-color
+  font-size: 30px
+  font-weight: 900
+  text-align: left
+  margin: 0
+  padding: 0
+
+.fitem1
+  color: #222222
+  font-size: 30px
+  font-weight: 700
+  text-align: center
+  margin: 0
+
+.fitem2
+  color: #9f9f9f
+  font-size: 14px
+  font-weight: 400
+  text-align: center
+  margin-bottom: 0
+  margin-top: 10px
+
+.featuring-item-text
+  display: flex
+  flex-direction: column
+  height: 211px
+  justify-content: center
+
+.box-products
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.product
+  margin-bottom: 50px
+  position: relative
+  transition: transform 500ms
+
+.product:hover .add-parent
+  display: flex
+
+.product:hover .product-image
+  filter: brightness(50%)
+
+.product:hover
+  transform: scale(1.04)
+
+.product-name
+  color: #222222
+  font-size: 13px
+  font-weight: 600
+
+.product-price
+  color: $accent-color
+  font-size: 16px
+  font-weight: 700
+  margin-top: 0
+
+.featured-item-text
+  padding-left: 20px
+
+.button-flex-container
+  display: flex
+  justify-content: space-around
+  align-items: flex-start
+  height: 120px
+
+.arrow
+  padding-left: 10px
+
+.search-img:hover
+  image-orientation: flip
+
+.product-link
+  text-decoration: none
+  text-transform: uppercase
+
+.add-parent
+  position: absolute
+  top: 98px
+  display: none
+  justify-content: center
+  width: 263px
+
+.add
+  display: flex
+  align-items: center
+  border: 1px solid #ffffff
+  box-sizing: border-box
+  background-color: rgba(255, 255, 255, 0)
+  height: 39px
+  padding: 0 12px
+  color: #ffffff
+  font-size: 13px
+  font-weight: 700
+  text-decoration: none
+  line-height: 39px
+  outline: none
+  &:hover
+    box-shadow: 0 0 8px #fff
+
+  &:active
+    box-shadow: 0 0 15px #fff
+
+.bonus .bonus-left img
+  width: 40px
+  height: 40px
+
+.bonus .bonus-right h3
+  color: #fbfbfb
+  font-size: 20px
+  font-weight: 700
+  text-align: left
+  margin-bottom: 10px
+  margin-top: 10px
+
+.bonus .bonus-right p
+  height: 58px
+  font-size: 14px
+  line-height: 24px
+  font-weight: 300
+  letter-spacing: 0.025em
+  color: #fbfbfb
+
+.offers
+  background-color: #222224
+  width: 1140px
+  height: 529px
+  display: flex
+  margin-bottom: 97px
+
+.offer-text
+  position: absolute
+  top: 146px
+  left: 39px
+
+.offer
+  position: relative
+
+.text-red
+  color: $accent-color
+  font-size: 53.62px
+  font-weight: 700
+  text-align: left
+
+.offer-text1
+  color: #ffffff
+  font-size: 53.62px
+  font-weight: 700
+  text-align: left
+  margin: 0
+
+.offer-text2
+  color: #ffffff
+  font-size: 32.17px
+  font-weight: 700
+  text-align: left
+  margin: 0
+
+.bonuses
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  padding: 20px
+
+.bonus
+  margin-left: 16px
+  display: flex
+
+.bonus-right
+  width: 219px
+  padding-left: 33px

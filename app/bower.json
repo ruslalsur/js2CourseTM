@@ -1,0 +1,21 @@
+{
+  "name": "js2coursetm",
+  "authors": [
+    "Ruslan <suhrugen@gmail.com>"
+  ],
+  "description": "Project of js level 2 course",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui": "^1.12.1"
+  }
+}

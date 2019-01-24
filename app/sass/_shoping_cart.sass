@@ -1,0 +1,207 @@
+@import "_variables"
+
+.product-list-row
+  padding-top: 22px
+  padding-bottom: 22px
+  display: flex
+  border-bottom: 1.0px solid #000000
+  &:first-child
+    font-size: 13px
+    line-height: 20px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: -0.015em
+    color: #222222
+
+.product-list-col
+  display: flex
+  width: ($container-width - $container-width / 2.3) / 5
+  justify-content: center
+  align-items: center
+  &:first-child
+    width: $container-width / 2.3
+    justify-content: left
+
+.product-list-col img:hover
+  &:hover
+    filter: brightness(90%) contrast(224%)
+
+.details-text
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  height: 100%
+  margin-left: 22px
+
+.product-list-col h3
+  font-size: 13px
+  line-height: 1.2
+  font-weight: 600
+  text-transform: uppercase
+  color: #222222
+  margin: 0
+
+.quantity
+  font-size: 13px
+  line-height: 20px
+  font-weight: 600
+  color: #575757
+  width: 54px
+  height: 30px
+  background-color: #ffffff
+  border: 1.0px solid #eaeaea
+  text-align: center
+  padding-left: 10px
+
+.product-list-col span
+  font-weight: 400
+  color: #6f6e6e
+
+.cart-button-control
+  display: flex
+  justify-content: space-between
+  margin-top: 40px
+  margin-bottom: 40px
+
+.cart-button
+  display: block
+  width: 235px
+  height: 50px
+  font-size: 14px
+  line-height: 50px
+  font-weight: 700
+  text-transform: uppercase
+  color: #4a4a4a
+  border: 1.0px solid #eaeaea
+  text-decoration: none
+  text-align: center
+  outline: none
+  transition: transform 200ms
+  &:active
+    transform: scale(0.90)
+  &:hover
+    box-shadow: 0 0 2px #000
+
+.cart-forms
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 70px
+
+.cart-forms h3
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  color: #222222
+
+.zh3
+  font-size: 13px
+  line-height: 1.2
+  font-weight: 600
+  text-transform: uppercase
+  color: #222222
+  margin: 0
+  text-decoration: none
+  transition: color 0.7s ease-in-out
+  &:hover
+    color: #f16d7f
+
+.cart-forms p
+  font-size: 14px
+  font-weight: 300
+  margin-top: 1px
+  margin-bottom: 20px
+
+.cart-form
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 355px
+
+.form-field
+  height: 45px
+  background-color: #ffffff
+  border: 1.0px solid #eaeaea
+  padding-left: 18px
+  padding-right: 18px
+  margin-bottom: 20px
+  font-size: 13px
+  font-weight: 300
+  color: #b1b1b1
+  outline: none
+
+.form-submit
+  width: 110px
+  height: 35px
+  background-color: #ffffff
+  border: 1.0px solid #eaeaea
+  font-size: 11px
+  line-height: 1.2
+  font-weight: 700
+  text-transform: uppercase
+  color: #4a4a4a
+  transition: box-shadow 0.7s linear
+  transition: transform 200ms
+  &:active
+    transform: scale(0.90)
+  &:hover
+    box-shadow: 0 0 2px #000
+
+.summary
+  width: 360px
+  background-color: #f5f3f3
+
+.summary-text
+  padding: 43px
+
+.summary-text p
+  font-size: 11px
+  line-height: 1.2
+  font-weight: 600
+  text-transform: uppercase
+  color: #4a4a4a
+  text-align: right
+  margin-top: 0
+  margin-bottom: 10px
+
+.summary-text h3
+  font-size: 16px
+  font-weight: 900
+  text-transform: uppercase
+  color: #222222
+  text-align: right
+
+.summary-text h3 span
+  color: $accent-color
+
+.summary-text hr
+  height: 1px
+  background-color: #e2e2e2
+  margin-top: 20px
+  margin-bottom: 20px
+
+.summary-text a
+  display: block
+  height: 50px
+  width: 100%
+  background-color: $accent-color
+  border: 0
+  line-height: 50px
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  color: #ffffff
+  text-align: center
+  text-decoration: none
+  transition: transform 200ms
+  &:active
+    transform: scale(0.90)
+  &:hover
+    transform: scale(1.01)
+
+
+
+
+
+
+
