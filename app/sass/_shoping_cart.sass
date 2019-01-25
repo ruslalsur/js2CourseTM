@@ -18,9 +18,26 @@
   width: ($container-width - $container-width / 2.3) / 5
   justify-content: center
   align-items: center
+  text-transform: uppercase
+  font-weight: 700
   &:first-child
     width: $container-width / 2.3
     justify-content: left
+  &:last-child
+
+#cancelBtn
+  align-self: center
+  background: none
+  border: 0
+  padding: 0
+  cursor: pointer
+  transition: transform 100ms
+  outline: none
+  filter: brightness(70%) contrast(100%)
+  &:hover
+    transform: scale(1.1)
+  &:active
+    transform: scale(1.3)
 
 .product-list-col img:hover
   &:hover
@@ -42,10 +59,9 @@
   margin: 0
 
 .quantity
-  font-size: 13px
+  font-size: 14px
   line-height: 20px
-  font-weight: 600
-  color: #575757
+  font-weight: 800
   width: 54px
   height: 30px
   background-color: #ffffff

@@ -312,109 +312,7 @@
                 <a class="breadca-this" href="shopping_cart.html">Shoping Cart</a>
             </div>
         </div>
-        <div class="cart-product-list container">
-            <div class="product-list-row">
-                <div class="product-list-col">
-                    Product Details
-                </div>
-                <div class="product-list-col">
-                    unite Price
-                </div>
-                <div class="product-list-col">
-                    Quantity
-                </div>
-                <div class="product-list-col">
-                    shipping
-                </div>
-                <div class="product-list-col">
-                    Subtotal
-                </div>
-                <div class="product-list-col">
-                    ACTION
-                </div>
-            </div>
-            <div class="product-list-row">
-                <div class="product-list-col">
-                    <a href="single_page.html"><img src="img/smoked-man1.png" alt="smokmen"></a>
-                    <div class="details-text">
-                        <a href="single_page.html" class="zh3"> Mango People T-shirt </a>
-                        <div class="details-text-group">
-                            <p>Color: <span>Red</span></p>
-                            <p>Size: <span>Xll</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-list-col">
-                    <p>$150</p>
-                </div>
-                <div class="product-list-col">
-                    <input class="quantity" type="number" min="1" max="99" placeholder="1">
-                </div>
-                <div class="product-list-col">
-                    <p>free</p>
-                </div>
-                <div class="product-list-col">
-                    <p>$300</p>
-                </div>
-                <div class="product-list-col">
-                    <a href="#"><img src="img/cancel.png" alt="cancel"></a>
-                </div>
-            </div>
-            <div class="product-list-row">
-                <div class="product-list-col">
-                    <a href="single_page.html"><img src="img/smoked-man2.png" alt="smokmen"></a>
-                    <div class="details-text">
-                        <a href="single_page.html" class="zh3"> Mango People T-shirt </a>
-                        <div class="details-text-group">
-                            <p>Color: <span>Red</span></p>
-                            <p>Size: <span>Xll</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-list-col">
-                    <p>$150</p>
-                </div>
-                <div class="product-list-col">
-                    <input class="quantity" type="number" min="1" max="99" placeholder="1">
-                </div>
-                <div class="product-list-col">
-                    <p>free</p>
-                </div>
-                <div class="product-list-col">
-                    <p>$300</p>
-                </div>
-                <div class="product-list-col">
-                    <a href="#"><img src="img/cancel.png" alt="cancel"></a>
-                </div>
-            </div>
-            <div class="product-list-row">
-                <div class="product-list-col">
-                    <a href="single_page.html"><img src="img/smoked-man3.png" alt="smokmen"></a>
-                    <div class="details-text">
-                        <a href="single_page.html" class="zh3"> Mango People T-shirt </a>
-                        <div class="details-text-group">
-                            <p>Color: <span>Red</span></p>
-                            <p>Size: <span>Xll</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-list-col">
-                    <p>$150</p>
-                </div>
-                <div class="product-list-col">
-                    <input class="quantity" type="number" min="1" max="99" placeholder="1">
-                </div>
-                <div class="product-list-col">
-                    <p>free</p>
-                </div>
-                <div class="product-list-col">
-                    <p>$300</p>
-                </div>
-                <div class="product-list-col">
-                    <a href="#"><img src="img/cancel.png" alt="cancel"></a>
-                </div>
-            </div>
-        </div>
+        <div id="cart-max" class="cart-product-list container"></div>
         <div class="cart-button-control container">
             <a href="#" class="cart-button">cLEAR SHOPPING CART</a>
             <a href="product.html" class="cart-button">cONTINUE sHOPPING</a>
@@ -440,7 +338,7 @@
             </form>
             <div class="summary">
                 <div class="summary-text">
-                    <p>Sub total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$900</p>
+                    <p>Sub total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sub-total">$900</span></p>
                     <h3>GRAND TOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>$900</span></h3>
                     <hr>
                     <a href="checkout.html">proceed to checkout</a>
