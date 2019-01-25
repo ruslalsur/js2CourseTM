@@ -92,23 +92,18 @@ class Cart {
             'data-product': product.id_product
         });
         
+        // взаимодействие с контролером изменения количества товара в корзине
         let $quanControl = $(`<input class="quantity" data-id="${product.id_product}" type="number" min="1" max="99" placeholder="1">`);
         $quanControl.val(product.quantity);
         $quanControl.change((e) => {
             let $currentVal = $(e.target).val();
-            
-            
-    
-            // $('.sub-total').val(product.quantity * product.price);
-    
             if ($currentVal > product.quantity) {
                 this.addProduct($(e.target));
             } else {
                 this._remove($(e.target).data('id'));
             }
     
-            let stotal = $('.sub-total');
-            stotal.find($(`p[data-id="${product.id_product}"]`).text(`$${product.quantity * product.price}`));
+            $('.sub-total').find($(`p[data-id="${product.id_product}"]`).text(`$${product.quantity * product.price}`));
             $('.summary-text p span').text(`$${product.quantity * product.price}`);
         });
     
@@ -129,7 +124,10 @@ class Cart {
         
         let $cancelBtn = $(`<button id="cancelBtn"><img src="img/cancel.png" width="20px" alt="cancel"></button>`);
         $cancelBtn.click(() => {
-            this._remove(product.id_product)
+            this._remove(product.id_product);
+            
+            $('.sub-total').find($(`p[data-id="${product.id_product}"]`).text(`$${product.quantity * product.price}`));
+            $('.summary-text p span').text(`$${product.quantity * product.price}`);
         });
         $container.append($(`<div class="product-list-col"></div>`).append($cancelBtn));
         
