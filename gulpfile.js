@@ -52,6 +52,11 @@ gulp.task('other_css', () => {
        .pipe(gulp.dest('dist/css'))
 });
 
+gulp.task('jq-ui-themes', () => {
+    return gulp.src('app/bower_components/jquery-ui/themes/**')
+        .pipe(gulp.dest('dist/css/themes'))
+});
+
 // JS6 - es6
 gulp.task('js:es6', () => {
     return gulp.src('app/js/**/*.js')
@@ -116,4 +121,4 @@ gulp.task('server', () => {
 });
 
 // Переопределяем задачу по-умолчанию
-gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'other_css', 'img', 'json', 'js:es6', 'bower:js'), gulp.parallel('html:watch', 'sass:watch', 'js:watch', 'server')));
+gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'other_css', 'jq-ui-themes', 'img', 'json', 'js:es6', 'bower:js'), gulp.parallel('html:watch', 'sass:watch', 'js:watch', 'server')));

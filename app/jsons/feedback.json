@@ -1,8 +1,8 @@
 {
   "maxID": 3,
   "comments": [
-          {"id": "1", "author": "Anna", "text": "some text", "approved": true},
-          {"id": "2", "author": "Tom", "text": "some text", "approved": true},
-          {"id": "3", "author": "John", "text": "some text", "approved": false}
+          {"id": "1", "author": "Anna", "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad et itaque numquam qui sit ullam. Beatae consectetur corporis, et excepturi facere id inventore libero nihil. Aliquam beatae delectus eveniet facere, facilis maxime, mollitia nam necessitatibus neque nisi ... ", "approved": true},
+          {"id": "2", "author": "Tom", "text": "Beatae consectetur corporis, et excepturi facere id inventore libero nihil. Aliquam beatae delectus eveniet facere, facilis maxime, mollitia nam necessitatibus neque nisi ... ", "approved": true},
+          {"id": "3", "author": "John", "text": "Ad et itaque numquam qui sit ullam. Beatae consectetur corporis, et excepturi facere id inventore libero nihil. Aliquam beatae delectus eveniet facere, facilis maxime, mollitia nam necessitatibus neque nisi ... ", "approved": false}
   ]
 }
