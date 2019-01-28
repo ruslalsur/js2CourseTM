@@ -43,6 +43,7 @@ gulp.task('img', () => {
     return gulp.src('app/img/**/*.+(jpg|png|gif|svg)')
         .pipe(imgOpti())
         .pipe(gulp.dest('dist/img'))
+        
 });
 
 // минимизация и копирование разных там библиотек .css
@@ -50,16 +51,13 @@ gulp.task('other_css', () => {
    return gulp.src('app/lib/normalize.css')
        .pipe(cssMinify())
        .pipe(gulp.dest('dist/css'))
+       
 });
 
-gulp.task('jq-ui-themes', () => {
-    return gulp.src('app/bower_components/jquery-ui/themes/**')
-        .pipe(gulp.dest('dist/css/themes'))
-});
 
 // JS6 - es6
 gulp.task('js:es6', () => {
-    return gulp.src('app/js/**/*.js')
+    return gulp.src(['app/js/**/*.js', 'app/bower_components/jquery/dist/jquery.min.js'])
         .pipe(minifyJs())
         .pipe(gulp.dest('dist/js'))
         .pipe(bs.reload({stream: true}))
@@ -76,20 +74,21 @@ gulp.task('js:babel', () => {
             suffix: '.es5'
         }))
         .pipe(gulp.dest('dist/js'))
+        .pipe(bs.reload({stream: true}))
 });
 
 // JSON
 gulp.task('json', () => {
     return gulp.src('app/jsons/**/*.json')
         .pipe(gulp.dest('dist/jsons'))
+        
 });
 
-//Components
-gulp.task('bower:js', () => {
-    return gulp.src(['app/bower_components/jquery/dist/jquery.min.js', 'app/bower_components/jquery-ui/jquery-ui.min.js'])
-        .pipe(gulp.dest('dist/js'));
+// slick-carousel
+gulp.task('slick', () => {
+    return gulp.src('app/bower_components/slick-carousel/slick/**')
+        .pipe(gulp.dest('dist/components/slick'))
 });
-
 
 
 // Следим за html
@@ -121,4 +120,4 @@ gulp.task('server', () => {
 });
 
 // Переопределяем задачу по-умолчанию
-gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'other_css', 'jq-ui-themes', 'img', 'json', 'js:es6', 'bower:js'), gulp.parallel('html:watch', 'sass:watch', 'js:watch', 'server')));
+gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'other_css', 'slick', 'img', 'json', 'js:es6'), gulp.parallel('html:watch', 'sass:watch', 'js:watch', 'server')));

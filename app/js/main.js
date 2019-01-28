@@ -14,4 +14,13 @@ $(document).ready(() => {
     
     // Добавление даты в футер
     $('.copyline').html(`&copy&nbsp${new Date().getFullYear()}&nbsp;Brand All Rights Reserved.`);
+    
+    // Инициализация слайдера на странице одного товара
+    if ($('.sl-carousel').length) {
+        $('.sl-carousel').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: false,
+        });
+    }
 });

@@ -32,6 +32,9 @@ class Feedback {
                 text: $('#text').val(),
                 approved: false
             };
+            $('#author').val('');
+            $('#text').val('')
+            
             this.comments.push(comment);
             this._renderComment(comment);
         })

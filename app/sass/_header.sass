@@ -263,6 +263,9 @@
   left: -5px
   display: none
   z-index: 9
+  & img
+    padding-top: 10px
+    margin-left: -20px
 
 .drop-box:before
   content: ""
@@ -276,6 +279,23 @@
   background-color: #ffffff
   border-top: 1px solid #ececec
   border-left: 1px solid #ececec
+
+.menu-list:last-child .drop-box
+  top: 45px
+  left: -750px
+  &:before
+    content: ""
+    display: block
+    width: 12px
+    height: 12px
+    position: absolute
+    top: -7px
+    left: 795px
+    transform: rotate(45deg)
+    background-color: #ffffff
+    border-top: 1px solid #ececec
+    border-left: 1px solid #ececec
+
 
 .drop-link
   font-size: 14px
