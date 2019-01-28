@@ -116,6 +116,8 @@ gulp.task('server', () => {
             baseDir: 'dist'
         },
         browser: 'Safari'
+        // browser: 'Google Chrome'
+        // browser: 'Firefox'
     })
 });
 

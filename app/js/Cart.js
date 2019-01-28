@@ -14,19 +14,43 @@ class Cart {
         if ($(this.containerMax).length) {
             this._renderMax();
         }
-        fetch(this.source)
-            .then(result => result.json())
-            .then(data => {
-                for (let product of data.contents){
-                    this.cartItems.push(product);
-                    this._renderItem(product);
-                    this._renderItemMax(product);
-                }
-                
-                this.countGoods = data.countGoods;
-                this.amount = data.amount;
-                this._renderSum();
-            })
+        
+        if (!localStorage.getItem('cart_items')) {
+            fetch(this.source)
+                .then(result => result.json())
+                .then(data => {
+                    for (let product of data.contents) {
+                        this.cartItems.push(product);
+                        this._renderItem(product);
+                        this._renderItemMax(product);
+                    }
+            
+                    this.countGoods = data.countGoods;
+                    this.amount = data.amount;
+    
+                    // localStorage.setItem('cart_items', JSON.stringify(this.cartItems));
+                    // localStorage.setItem('cart_amount', JSON.stringify(this.amount));
+                    // localStorage.setItem('cart_count_goods', JSON.stringify(this.countGoods));
+                    this._storageUpdate();
+                    this._renderSum();
+                })
+        } else {
+            this.cartItems = JSON.parse(localStorage.getItem('cart_items'));
+            for (let product of this.cartItems) {
+                this._renderItem(product);
+                this._renderItemMax(product);
+            }
+            this.amount = JSON.parse(localStorage.getItem('cart_amount'));
+            this.countGoods = JSON.parse(localStorage.getItem('cart_count_goods'));
+            this._renderSum();
+        }
+    }
+    
+    // обновление локального хранилища
+    _storageUpdate() {
+        localStorage.setItem('cart_items', JSON.stringify(this.cartItems));
+        localStorage.setItem('cart_amount', JSON.stringify(this.amount));
+        localStorage.setItem('cart_count_goods', JSON.stringify(this.countGoods));
     }
     
     // отображение маленькой корзины
@@ -180,7 +204,12 @@ class Cart {
             this.countGoods += product.quantity;
         }
         
+        this._storageUpdate();
+        // localStorage.setItem('cart_items', JSON.stringify(this.cartItems));
+        // localStorage.setItem('cart_amount', JSON.stringify(this.amount));
+        // localStorage.setItem('cart_count_goods', JSON.stringify(this.countGoods));
         this._renderSum();
+       
     }
     
     _remove(id) {
@@ -195,6 +224,21 @@ class Cart {
         
         this.countGoods--;
         this.amount -= find.price;
+        
+        this._storageUpdate();
+        // localStorage.setItem('cart_items', JSON.stringify(this.cartItems));
+        // localStorage.setItem('cart_amount', JSON.stringify(this.amount));
+        // localStorage.setItem('cart_count_goods', JSON.stringify(this.countGoods));
         this._renderSum();
+    }
+    
+    clearCart() {
+        this.cartItems.length = 0;
+        this.amount = 0;
+        this.countGoods = 0;
+        this._storageUpdate();
+        this._renderSum();
+        $(this.container).remove();
+        $(this.containerMax).remove();
     }
 }

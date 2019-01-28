@@ -7,6 +7,10 @@ $(document).ready(() => {
         cart.addProduct(e.currentTarget);
     });
     
+    $('.cart-button-control .cart-button').click(() => {
+        cart.clearCart();
+    });
+    
     // Создание экземпляра класса отзывов
     if ($('#feedbacks').length) {
         let feedback = new Feedback('jsons/feedback.json');
