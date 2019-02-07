@@ -36,6 +36,9 @@
   color: #f16d7f
   font-weight: 700
 
+
+// Меню на кнопке browse
+
 .browse
   width: 87px
   height: 38px
@@ -51,14 +54,63 @@
   color: #222222
   margin-left: 37px
   position: relative
+  & img
+    position: absolute
+    top: 16px
+    left: 69px
+    transform: rotate(-90deg)
+    transition: transform 500ms
+  &:hover .drop-box-browse
+    display: flex
+  &:hover img
+    transform: rotate(0deg)
 
-.browse img
+.drop-box-browse
+  border-radius: 5.0px
+  background: #ffffff
+  border: 1px solid #ececec
+  padding: 20px
   position: absolute
-  top: 16px
-  left: 69px
-
-.browse:hover .drop-box-browse
-  display: flex
+  top: 35px
+  left: -3px
+  display: none
+  z-index: 9
+  flex-direction: column
+  & ul
+    list-style-type: none
+    margin-right: 46px
+    & li:first-child
+      font-size: 14px
+      line-height: 32px
+      font-weight: 600
+      text-transform: uppercase
+      letter-spacing: 0.025em
+      color: #232323
+      border-bottom: 1px solid #e8e8e8
+      width: 235px
+      margin-bottom: 10px
+    & li a
+      padding: 0
+      font-size: 14px
+      line-height: 28px
+      font-weight: 400
+      letter-spacing: 0.025em
+      color: #646464
+      text-decoration: none
+      &:hover
+        color: #f16d7f
+  &:before
+    content: ""
+    display: block
+    width: 12px
+    height: 12px
+    position: absolute
+    top: -7px
+    left: 69px
+    transform: rotate(45deg)
+    background-color: #ffffff
+    border-top: 1px solid #ececec
+    border-left: 1px solid #ececec
 
 .search-item-input
   border: 1.0px solid #e6e6e6
@@ -79,9 +131,8 @@
   transition: transform 200ms
   &:active
     transform: scale(0.90)
-
-.search-button:hover
-  box-shadow: 0 0 8px #e1e1e1
+  &:hover
+    box-shadow: 0 0 8px #e1e1e1
 
 .search-form
   display: flex
@@ -106,24 +157,26 @@
   display: flex
   align-items: center
   transition: transform 200ms
-
-.button:hover
-  background-color: #ffffff
-  box-shadow: 0 0 2px #f16d7f
-  color: #f16d7f
+  &:hover
+    background-color: #ffffff
+    box-shadow: 0 0 2px #f16d7f
+    color: #f16d7f
   &:active
     transform: scale(0.90)
 
 
-.basket-img
-  margin-right: 26px
-  transition: transform 500ms
-  &:hover
-    transform: rotate(180deg)
+
+
+// Маленькая корзина
 
 .basket
   position: relative
   display: flex
+  & .basket-img
+    margin-right: 26px
+    transition: transform 500ms
+    &:hover
+      transform: rotate(180deg)
 
 .basket:focus .drop-box-basket, .basket:focus-within .drop-box-basket, .basket:hover .drop-box-basket
   visibility: visible
@@ -176,19 +229,18 @@
     margin-bottom: 0
     & span
       margin-bottom: 0
-
-.drop-box-basket::before
-  content: ""
-  display: block
-  width: 12px
-  height: 12px
-  position: absolute
-  top: -7px
-  left: 29px
-  transform: rotate(45deg)
-  background-color: #ffffff
-  border-top: 1px solid #ececec
-  border-left: 1px solid #ececec
+  &:before
+    content: ""
+    display: block
+    width: 12px
+    height: 12px
+    position: absolute
+    top: -7px
+    left: 29px
+    transform: rotate(45deg)
+    background-color: #ffffff
+    border-top: 1px solid #ececec
+    border-left: 1px solid #ececec
 
 .drop-backet-link
   display: flex
@@ -215,7 +267,6 @@
   display: flex
   flex-direction: column
   width: 110px
-
   & h3
     font-size: 13px
     line-height: 1.2
@@ -233,25 +284,47 @@
 .logo-img
   margin-right: 13px
 
+
+
+
+// Мегаменю
+
+.nav
+  background-color: #ffffff
+
 .menu
   list-style-type: none
   display: flex
   height: 51px
   justify-content: center
-
-.menu-link
-  padding: 16px 15px
-  display: block
-  color: #222222
-  font-size: 14px
-  font-weight: 700
-  text-decoration: none
-
-.menu-link:hover
-  color: #f16d7f
-
-.nav
-  background-color: #ffffff
+  li
+    position: relative
+    &:hover .drop-box
+      display: flex
+    &:nth-last-child(2) .drop-box, &:last-child .drop-box
+      top: 45px
+      left: -797px
+      &:before
+        content: ""
+        display: block
+        width: 12px
+        height: 12px
+        position: absolute
+        top: -7px
+        left: 840px
+        transform: rotate(45deg)
+        background-color: #ffffff
+        border-top: 1px solid #ececec
+        border-left: 1px solid #ececec
+    & a
+      padding: 16px 15px
+      display: block
+      color: #222222
+      font-size: 14px
+      font-weight: 700
+      text-decoration: none
+      &:hover
+        color: #f16d7f
 
 .drop-box
   background-color: #ffffff
@@ -263,26 +336,6 @@
   left: -5px
   display: none
   z-index: 9
-  & img
-    padding-top: 10px
-    margin-left: -10px
-
-.drop-box:before
-  content: ""
-  display: block
-  width: 12px
-  height: 12px
-  position: absolute
-  top: -7px
-  left: 29px
-  transform: rotate(45deg)
-  background-color: #ffffff
-  border-top: 1px solid #ececec
-  border-left: 1px solid #ececec
-
-.menu-list:last-child .drop-box
-  top: 45px
-  left: -750px
   &:before
     content: ""
     display: block
@@ -290,70 +343,36 @@
     height: 12px
     position: absolute
     top: -7px
-    left: 795px
+    left: 29px
     transform: rotate(45deg)
     background-color: #ffffff
     border-top: 1px solid #ececec
     border-left: 1px solid #ececec
-
-
-.drop-link
-  font-size: 14px
-  line-height: 28px
-  font-weight: 400
-  letter-spacing: 0.025em
-  color: #646464
-  text-decoration: none
-
-.drop-link:hover
-  color: #f16d7f
-
-.drop-ul
-  list-style-type: none
-
-.drop-header
-  font-size: 14px
-  line-height: 32px
-  font-weight: 600
-  text-transform: uppercase
-  letter-spacing: 0.025em
-  color: #232323
-  border-bottom: 1px solid #e8e8e8
-  width: 235px
-  margin-bottom: 10px
-
-.menu-list
-  position: relative
-
-.menu-list:hover .drop-box
-  display: flex
-
-.drop-flex
-  margin-right: 46px
-
-.drop-flex:last-of-type
-  margin-right: 0
-
-.drop-box-browse
-  border-radius: 5.0px
-  background: #ffffff
-  border: 1px solid #ececec
-  padding: 20px
-  position: absolute
-  top: 35px
-  left: -3px
-  display: none
-  z-index: 9
-
-.drop-box-browse:before
-  content: ""
-  display: block
-  width: 12px
-  height: 12px
-  position: absolute
-  top: -7px
-  left: 69px
-  transform: rotate(45deg)
-  background-color: #ffffff
-  border-top: 1px solid #ececec
-  border-left: 1px solid #ececec
+  & ul
+    list-style-type: none
+    margin-right: 46px
+    &:last-child
+      margin-right: 0
+    & li:first-child
+      font-size: 14px
+      line-height: 32px
+      font-weight: 600
+      text-transform: uppercase
+      letter-spacing: 0.025em
+      color: #232323
+      border-bottom: 1px solid #e8e8e8
+      width: 235px
+      margin-bottom: 10px
+    & li a
+      padding: 0
+      font-size: 14px
+      line-height: 28px
+      font-weight: 400
+      letter-spacing: 0.025em
+      color: #646464
+      text-decoration: none
+      &:hover
+        color: #f16d7f
+    & li img
+      padding-top: 10px
+      margin-left: -10px

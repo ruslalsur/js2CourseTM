@@ -27,10 +27,6 @@ class Cart {
             
                     this.countGoods = data.countGoods;
                     this.amount = data.amount;
-    
-                    // localStorage.setItem('cart_items', JSON.stringify(this.cartItems));
-                    // localStorage.setItem('cart_amount', JSON.stringify(this.amount));
-                    // localStorage.setItem('cart_count_goods', JSON.stringify(this.countGoods));
                     this._storageUpdate();
                     this._renderSum();
                 })
@@ -205,9 +201,6 @@ class Cart {
         }
         
         this._storageUpdate();
-        // localStorage.setItem('cart_items', JSON.stringify(this.cartItems));
-        // localStorage.setItem('cart_amount', JSON.stringify(this.amount));
-        // localStorage.setItem('cart_count_goods', JSON.stringify(this.countGoods));
         this._renderSum();
        
     }
@@ -226,9 +219,6 @@ class Cart {
         this.amount -= find.price;
         
         this._storageUpdate();
-        // localStorage.setItem('cart_items', JSON.stringify(this.cartItems));
-        // localStorage.setItem('cart_amount', JSON.stringify(this.amount));
-        // localStorage.setItem('cart_count_goods', JSON.stringify(this.countGoods));
         this._renderSum();
     }
     
