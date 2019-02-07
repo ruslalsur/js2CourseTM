@@ -24,17 +24,15 @@
   font-weight: 400
   text-decoration: none
   text-transform: uppercase
-  transition: transform 1s
+  transition: transform 100ms
+  & span
+    color: #f16d7f
+    font-weight: 700
   &:hover
-    -webkit-transform: scale(1.2)
-    -moz-transform: scale(1.2)
-    -ms-transform: scale(1.2)
-    -o-transform: scale(1.2)
-    transform: scale(1.2)
+    transform: scale(0.8)
 
-.logo-D
-  color: #f16d7f
-  font-weight: 700
+.logo-img
+  margin-right: 13px
 
 
 // Меню на кнопке browse
@@ -66,10 +64,11 @@
     transform: rotate(0deg)
 
 .drop-box-browse
+  line-height: 28px
   border-radius: 5.0px
   background: #ffffff
   border: 1px solid #ececec
-  padding: 20px
+  padding: 0 15px 10px 15px
   position: absolute
   top: 35px
   left: -3px
@@ -78,27 +77,32 @@
   flex-direction: column
   & ul
     list-style-type: none
-    margin-right: 46px
+    width: 235px
+
     & li:first-child
-      font-size: 14px
+      font-size: 13px
       line-height: 32px
       font-weight: 600
       text-transform: uppercase
       letter-spacing: 0.025em
       color: #232323
       border-bottom: 1px solid #e8e8e8
-      width: 235px
-      margin-bottom: 10px
-    & li a
-      padding: 0
-      font-size: 14px
-      line-height: 28px
-      font-weight: 400
-      letter-spacing: 0.025em
-      color: #646464
-      text-decoration: none
-      &:hover
-        color: #f16d7f
+      padding-left: 0
+      margin-bottom: 7px
+      & h3
+        margin: 12px 0 0 0
+    & li
+      padding-left: 7px
+      & a
+        padding: 0
+        font-size: 14px
+        line-height: 28px
+        font-weight: 500
+        letter-spacing: 0.025em
+        color: #646464
+        text-decoration: none
+        &:hover
+          color: #f16d7f
   &:before
     content: ""
     display: block
@@ -281,9 +285,6 @@
     text-transform: uppercase
     color: #f16d7f
 
-.logo-img
-  margin-right: 13px
-
 
 
 
@@ -303,7 +304,7 @@
       display: flex
     &:nth-last-child(2) .drop-box, &:last-child .drop-box
       top: 45px
-      left: -797px
+      left: -750px
       &:before
         content: ""
         display: block
@@ -311,7 +312,7 @@
         height: 12px
         position: absolute
         top: -7px
-        left: 840px
+        left: 800px
         transform: rotate(45deg)
         background-color: #ffffff
         border-top: 1px solid #ececec
@@ -330,7 +331,7 @@
   background-color: #ffffff
   border-radius: 5.0px
   border: 1px solid #ececec
-  padding: 20px
+  padding: 0px 20px 10px 20px
   position: absolute
   top: 45px
   left: -5px
@@ -348,11 +349,12 @@
     background-color: #ffffff
     border-top: 1px solid #ececec
     border-left: 1px solid #ececec
-  & ul
-    list-style-type: none
+  & div
     margin-right: 46px
     &:last-child
       margin-right: 0
+  & ul
+    list-style-type: none
     & li:first-child
       font-size: 14px
       line-height: 32px
@@ -362,7 +364,8 @@
       color: #232323
       border-bottom: 1px solid #e8e8e8
       width: 235px
-      margin-bottom: 10px
+      margin-bottom: 5px
+      margin-top: 15px
     & li a
       padding: 0
       font-size: 14px

@@ -40,7 +40,7 @@ $(document).ready(() => {
                 menuItems.push(new MenuItem(menuItem));
             }
             
-            let browseMenu = new Menu($browseContainer, 'none', menuItems);
+            let browseMenu = new Menu('', '', menuItems);
             $browseDropBox = $('<div>', {class: 'drop-box-browse'});
             $browseDropBox.html(browseMenu.render());
             $browseContainer.append($browseDropBox);
