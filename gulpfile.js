@@ -115,8 +115,8 @@ gulp.task('server', () => {
         server: {
             baseDir: 'dist'
         },
-        browser: 'Safari'
-        // browser: 'Google Chrome'
+        // browser: 'Safari'
+        browser: 'Google Chrome'
         // browser: 'Firefox'
     })
 });
